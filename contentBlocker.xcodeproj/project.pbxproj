@@ -14,6 +14,9 @@
 		41EAFD6F29E839DA0003E17D /* contentBlockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EAFD6E29E839DA0003E17D /* contentBlockerTests.swift */; };
 		41EAFD7929E839DA0003E17D /* contentBlockerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EAFD7829E839DA0003E17D /* contentBlockerUITests.swift */; };
 		41EAFD7B29E839DA0003E17D /* contentBlockerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EAFD7A29E839DA0003E17D /* contentBlockerUITestsLaunchTests.swift */; };
+		41EAFD8E29E839EB0003E17D /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 41EAFD8D29E839EB0003E17D /* blockerList.json */; };
+		41EAFD9029E839EB0003E17D /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EAFD8F29E839EB0003E17D /* ContentBlockerRequestHandler.swift */; };
+		41EAFD9429E839EB0003E17D /* oneContentBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 41EAFD8B29E839EB0003E17D /* oneContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,28 @@
 			remoteGlobalIDString = 41EAFD5829E839D90003E17D;
 			remoteInfo = contentBlocker;
 		};
+		41EAFD9229E839EB0003E17D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41EAFD5129E839D90003E17D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41EAFD8A29E839EB0003E17D;
+			remoteInfo = oneContentBlocker;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		41EAFD9829E839EB0003E17D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				41EAFD9429E839EB0003E17D /* oneContentBlocker.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		41EAFD5929E839D90003E17D /* contentBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contentBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +69,10 @@
 		41EAFD7429E839DA0003E17D /* contentBlockerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contentBlockerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41EAFD7829E839DA0003E17D /* contentBlockerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentBlockerUITests.swift; sourceTree = "<group>"; };
 		41EAFD7A29E839DA0003E17D /* contentBlockerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentBlockerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		41EAFD8B29E839EB0003E17D /* oneContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = oneContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		41EAFD8D29E839EB0003E17D /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		41EAFD8F29E839EB0003E17D /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		41EAFD9129E839EB0003E17D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +97,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41EAFD8829E839EB0003E17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +113,7 @@
 				41EAFD5B29E839D90003E17D /* contentBlocker */,
 				41EAFD6D29E839DA0003E17D /* contentBlockerTests */,
 				41EAFD7729E839DA0003E17D /* contentBlockerUITests */,
+				41EAFD8C29E839EB0003E17D /* oneContentBlocker */,
 				41EAFD5A29E839D90003E17D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +124,7 @@
 				41EAFD5929E839D90003E17D /* contentBlocker.app */,
 				41EAFD6A29E839DA0003E17D /* contentBlockerTests.xctest */,
 				41EAFD7429E839DA0003E17D /* contentBlockerUITests.xctest */,
+				41EAFD8B29E839EB0003E17D /* oneContentBlocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +166,16 @@
 			path = contentBlockerUITests;
 			sourceTree = "<group>";
 		};
+		41EAFD8C29E839EB0003E17D /* oneContentBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				41EAFD8D29E839EB0003E17D /* blockerList.json */,
+				41EAFD8F29E839EB0003E17D /* ContentBlockerRequestHandler.swift */,
+				41EAFD9129E839EB0003E17D /* Info.plist */,
+			);
+			path = oneContentBlocker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,10 +186,12 @@
 				41EAFD5529E839D90003E17D /* Sources */,
 				41EAFD5629E839D90003E17D /* Frameworks */,
 				41EAFD5729E839D90003E17D /* Resources */,
+				41EAFD9829E839EB0003E17D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				41EAFD9329E839EB0003E17D /* PBXTargetDependency */,
 			);
 			name = contentBlocker;
 			productName = contentBlocker;
@@ -185,6 +234,23 @@
 			productReference = 41EAFD7429E839DA0003E17D /* contentBlockerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		41EAFD8A29E839EB0003E17D /* oneContentBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41EAFD9529E839EB0003E17D /* Build configuration list for PBXNativeTarget "oneContentBlocker" */;
+			buildPhases = (
+				41EAFD8729E839EB0003E17D /* Sources */,
+				41EAFD8829E839EB0003E17D /* Frameworks */,
+				41EAFD8929E839EB0003E17D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = oneContentBlocker;
+			productName = oneContentBlocker;
+			productReference = 41EAFD8B29E839EB0003E17D /* oneContentBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +272,9 @@
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 41EAFD5829E839D90003E17D;
 					};
+					41EAFD8A29E839EB0003E17D = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = 41EAFD5429E839D90003E17D /* Build configuration list for PBXProject "contentBlocker" */;
@@ -224,6 +293,7 @@
 				41EAFD5829E839D90003E17D /* contentBlocker */,
 				41EAFD6929E839DA0003E17D /* contentBlockerTests */,
 				41EAFD7329E839DA0003E17D /* contentBlockerUITests */,
+				41EAFD8A29E839EB0003E17D /* oneContentBlocker */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +319,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41EAFD8929E839EB0003E17D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EAFD8E29E839EB0003E17D /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +359,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41EAFD8729E839EB0003E17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EAFD9029E839EB0003E17D /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +379,11 @@
 			isa = PBXTargetDependency;
 			target = 41EAFD5829E839D90003E17D /* contentBlocker */;
 			targetProxy = 41EAFD7529E839DA0003E17D /* PBXContainerItemProxy */;
+		};
+		41EAFD9329E839EB0003E17D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41EAFD8A29E839EB0003E17D /* oneContentBlocker */;
+			targetProxy = 41EAFD9229E839EB0003E17D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -409,6 +500,7 @@
 		41EAFD7F29E839DA0003E17D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = contentBlocker/contentBlocker.entitlements;
@@ -445,6 +537,7 @@
 		41EAFD8029E839DA0003E17D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = contentBlocker/contentBlocker.entitlements;
@@ -564,6 +657,61 @@
 			};
 			name = Release;
 		};
+		41EAFD9629E839EB0003E17D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = oneContentBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = oneContentBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ds.contentBlocker.oneContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41EAFD9729E839EB0003E17D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = oneContentBlocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = oneContentBlocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ds.contentBlocker.oneContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -599,6 +747,15 @@
 			buildConfigurations = (
 				41EAFD8529E839DA0003E17D /* Debug */,
 				41EAFD8629E839DA0003E17D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41EAFD9529E839EB0003E17D /* Build configuration list for PBXNativeTarget "oneContentBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41EAFD9629E839EB0003E17D /* Debug */,
+				41EAFD9729E839EB0003E17D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
