@@ -14,5 +14,13 @@
         "trigger": {
             "url-filter": "facebook.com"
         }
+    },
+    {
+        "action": {
+            "type": "block"
+        },
+        "trigger": {
+            "url-filter": "twitter.com"
+        }
     }
 ]
